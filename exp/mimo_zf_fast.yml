@@ -1,0 +1,10 @@
+﻿Nt: 2
+Nr: 2
+M: 64
+Nfft: 512
+Ncp: 64
+data_ratio: 0.8125
+eq: ZF
+EbN0_dB: [0, 8, 16, 20]
+target_bit_errors: 50
+seed: 2025

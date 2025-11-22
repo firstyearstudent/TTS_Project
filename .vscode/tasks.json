@@ -1,0 +1,147 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run: AWGN 64-QAM",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/awgn.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: SISO-OFDM 64-QAM",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/ofdm.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: MIMO ZF (FULL)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/mimo_zf.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: MIMO LMMSE (FULL)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/mimo_lmmse.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: AWGN (FAST)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/awgn_fast.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: OFDM (FAST)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/ofdm_fast.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: MIMO ZF (FAST)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/mimo_zf_fast.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: MIMO LMMSE (FAST)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "run_sim.py",
+                "--config",
+                "exp/mimo_lmmse_fast.yml"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run: BOTH (FAST)",
+            "dependsOn": [
+                "Run: AWGN (FAST)",
+                "Run: OFDM (FAST)"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Run: ALL (FULL)",
+            "dependsOn": [
+                "Run: AWGN 64-QAM",
+                "Run: SISO-OFDM 64-QAM",
+                "Run: MIMO ZF (FULL)",
+                "Run: MIMO LMMSE (FULL)"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Plot: Report",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "tools/plot_report.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

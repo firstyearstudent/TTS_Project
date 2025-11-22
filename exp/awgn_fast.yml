@@ -1,0 +1,5 @@
+modulation: QAM
+M: 64
+EbN0_dB: [0,4,8,12,16,20]
+target_bit_errors: 50
+seed: 2025

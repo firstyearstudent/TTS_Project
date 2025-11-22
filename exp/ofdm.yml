@@ -1,0 +1,8 @@
+M: 64
+Nfft: 512
+Ncp: 64
+data_ratio: 0.8125   # ~416/512
+EbN0_dB: [0,4,8,12,16,20,24,28,30]
+target_bit_errors: 200
+seed: 2025
+max_bits_per_point: 2000000

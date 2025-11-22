@@ -1,0 +1,6 @@
+modulation: QAM
+M: 64
+EbN0_dB: [0,2,4,6,8,10,12,14,16,18,20,24,28,30]
+target_bit_errors: 200
+seed: 2025
+max_bits_per_point: 2000000
